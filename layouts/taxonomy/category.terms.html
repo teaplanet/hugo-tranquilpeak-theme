@@ -3,7 +3,7 @@
   {{ range where $.Site.Pages "Type" "post" }}
     {{ $page := . }}
     {{ if .Params.categories }}
-      {{ $categories := (apply .Params.categories "urlize" ".") }}
+      {{ $categories := .Params.categories }}
       {{ range $index,$value := $categories }}
         {{ if gt $index ($.Scratch.Get "max-level") }}
           {{ $.Scratch.Set "max-level" $index }}
