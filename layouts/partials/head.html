@@ -28,11 +28,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Hugo {{ .Hugo.Version }}">
+    <meta name="theme" content="Tranquilpeak 0.3.1-BETA">
     <title>{{ with .Title }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }}</title>
     <meta name="author" content="{{ .Site.Author.name }}">
     <meta name="keywords" content="{{ with .Keywords }}{{ delimit . ", " }}{{ end }}{{ if .Site.Params.keywords }}, {{ delimit .Site.Params.keywords ", " }}{{ end }}">
 
-    <link rel="icon" href="/favicon.png">
+    <link rel="icon" href="{{ with .Site.Params.favicon }}{{ . }}{{ else }}/favicon.png{{ end }}">
     {{ with .RSSLink }}
       <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ . }}">
     {{ end }}
@@ -89,9 +90,12 @@
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" />
     <!--EXTERNAL STYLES END-->
     <!--STYLES-->
-    <link rel="stylesheet" href="/css/style-gwlo24d2hxipxk8bi1sxik0zhlpn9t7ebcmgp9kubmmcjfzlavuyhvbqumhn.min.css" />
+    <link rel="stylesheet" href="/css/style-u6mk0ojoywresbx8iepslrmmhl4stuhrsxuwhkpwrkrx7mryjcaimasnk4pi.min.css" />
     <!--STYLES END-->
-    
+    {{ range .Site.Params.customCSS }}
+      <link rel="stylesheet" href="{{ $.Site.BaseURL }}{{ . }}">
+    {{ end }}
+
     {{ if .Params.ga.async }}
       {{ template "_internal/google_analytics_async.html" . }}
     {{ else }}

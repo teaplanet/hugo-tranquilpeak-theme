@@ -2,6 +2,45 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.3.1-BETA](https://github.com/kakawait/hugo-tranquilpeak-theme/milestone/13) - 15 apr 2017
+
+- Fix Merriweather font to support non latin chars ([#129](https://github.com/kakawait/hugo-tranquilpeak-theme/issues/129), [#142](https://github.com/kakawait/hugo-tranquilpeak-theme/issues/142), [#143](https://github.com/kakawait/hugo-tranquilpeak-theme/pull/143))
+- Fix `exampleSite/config.toml` about `customCSS` and `customJS` ([#137](https://github.com/kakawait/hugo-tranquilpeak-theme/issues/137), [#141](https://github.com/kakawait/hugo-tranquilpeak-theme/pull/141))
+- Add meta tag `theme` that will contain theme version ([#140](https://github.com/kakawait/hugo-tranquilpeak-theme/issues/140), [#144](https://github.com/kakawait/hugo-tranquilpeak-theme/pull/144))
+
+## [0.3.0-BETA](https://github.com/kakawait/hugo-tranquilpeak-theme/milestone/3) - 9 apr 2017
+
+- Update minimun requirement to Hugo 0.20 ([#134](https://github.com/kakawait/hugo-tranquilpeak-theme/pull/134))
+- Fix warning from Hugo 0.19 ([#125](https://github.com/kakawait/hugo-tranquilpeak-theme/pull/125)) (thank you [jmugz3](https://github.com/jmugz3))
+- Hugo 0.20 fix 404's page for archive ([#111](https://github.com/kakawait/hugo-tranquilpeak-theme/issues/111))
+
+### Breaking changes
+
+Do not support anymore Hugo version < 0.20! 
+
+## [0.2.3-ALPHA](https://github.com/kakawait/hugo-tranquilpeak-theme/milestone/12) - 31 mar 2017
+
+- CSS and JS imports customization ([#120](https://github.com/kakawait/hugo-tranquilpeak-theme/pull/120)) (thank you [yamila-moreno](https://github.com/yamila-moreno))
+
+two news settings:
+
+```toml
+customCSS = ["css/foo.css"]
+customJS = ["js/foo.js"]
+```
+
+That allow you to inject your own `CSS` or `JS`
+
+- Fix nav since Hugo 0.18 ([#119](https://github.com/kakawait/hugo-tranquilpeak-theme/issues/119), [#122](https://github.com/kakawait/hugo-tranquilpeak-theme/pull/122))
+- Change _Next_ and _Previous_ behavior ([#118](https://github.com/kakawait/hugo-tranquilpeak-theme/issues/118), [#122](https://github.com/kakawait/hugo-tranquilpeak-theme/pull/122))
+
+### Breaking changes
+
+Related to new _Next_ and _Previous_ behavior [#118](https://github.com/kakawait/hugo-tranquilpeak-theme/issues/118), nav is now working like following
+
+Next -> Newer post
+Previous -> Older post
+
 ## [0.2.2-ALPHA](https://github.com/kakawait/hugo-tranquilpeak-theme/milestone/11) - 14 feb 2017
 
 - Page archetype ([#106](https://github.com/kakawait/hugo-tranquilpeak-theme/issues/106)) (thank you [@ebouchut](https://github.com/ebouchut))
